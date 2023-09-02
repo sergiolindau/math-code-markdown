@@ -1,0 +1,58 @@
+{
+  "name": "math-code-markdown",
+  "version": "0.0.1",
+  "description": "MathCodeMarkdown - An engine for rendering html from markdown files with mathematical expressions, graphics, code, and relative references.",
+  "main": "dist/mathjslab.js",
+  "types": "dist/src/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergiolindau/math-code-markdown.git"
+  },
+  "keywords": [
+    "Markdown",
+    "MathML",
+    "Mathematics",
+    "HTML",
+    "highlight",
+    "graphics"
+  ],
+  "author": "Sergio Lindau <sergiolindau@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sergiolindau/math-code-markdown/issues"
+  },
+  "homepage": "https://github.com/sergiolindau/math-code-markdown#readme",
+  "scripts": {
+    "test": "ts-node-dev --respawn --transpile-only  test/test.ts",
+    "git:add:all": "git add .",
+    "git:commit:initial": "git commit -m \"Initial Commit\"",
+    "git:push": "git push",
+    "git:add:commit:push": "npm run git:add:all && npm run git:commit:initial && npm run git:push",
+    "update": "npx ncu -u",
+    "build": "webpack --mode production",
+    "clean": "rimraf dist",
+    "publish-math-code-markdown": "npm publish --access public"
+
+  },
+  "dependencies": {
+    "highlight.js": "^11.8.0",
+    "marked": "^7.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.1",
+    "@types/webpack": "^5.28.1",
+    "rimraf": "^5.0.1",
+    "ts-loader": "^9.4.4",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "4.2.0",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false
+  }
+}
